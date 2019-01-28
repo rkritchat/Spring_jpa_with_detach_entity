@@ -11,8 +11,8 @@ user.setPwd("5678");
 Address tmp = new Address();
 AddresRepo.save(tmp); 
 
-for above code system should be save only tmp entity be casuse we using AddresRepo.save but acually
-system also save User entity becasue User has change...
+for above code system should be save only tmp entity becasuse we using AddresRepo.save but acually
+system also save User entity becasue it has change...
 
 to avoid this case we need to use EntityManager.detach(Entity) for remove that entity from persistenceContext
 
